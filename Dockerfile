@@ -22,7 +22,7 @@ COPY del_new.php /var/www/html/
 COPY scan.php /var/www/html/
 COPY show.php /var/www/html/
 
-RUN mysqladmin -u root password 123456
+#RUN mysqladmin -u root password 123456
 
 
 # install supervisord
