@@ -14,7 +14,7 @@
     } 
     echo "Connected successfully";
     mysqli_query($conn,"USE toybox");
-    $sql = "DELETE FROM toy WHERE `ip_address` = '".$ip_n_web."'"; 
+    $sql = "DELETE FROM toy WHERE `ip_address` = '".$ip_n_web."' AND `port` = 'Scanning'"; 
     mysqli_query($conn, $sql);
     $conn->close();
 
