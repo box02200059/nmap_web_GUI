@@ -37,5 +37,6 @@
     mysqli_query($conn, $sql);
 
     $conn->close();
+    echo "<script>alert('ok');location.href='../show.php'</script>";
 
 ?>
