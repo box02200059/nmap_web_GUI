@@ -5,7 +5,7 @@ import time
 
 
 def parser():
-    show_html = requests.get('http://127.0.0.1/astro/show.php')
+    show_html = requests.get('http://127.0.0.1/show.php')
     soup = BeautifulSoup(show_html.text, 'html.parser')
 
     x_port = []
@@ -41,7 +41,7 @@ def post(ip_address, port, product, version, name, cpe, extrainfo):
         'cpe': cpe,
         'extrainfo': extrainfo,
     }
-    requests.post('http://127.0.0.1/astro/scan.php', data=post_payload)
+    requests.post('http://127.0.0.1/scan.php', data=post_payload)
 
 
 def post_del(target):
@@ -49,7 +49,7 @@ def post_del(target):
         'ip_address': target,
     }
     post_data = requests.post(
-        'http://127.0.0.1/astro/del_new.php', data=post_payload)
+        'http://127.0.0.1/del_new.php', data=post_payload)
 
 
 num = 0
