@@ -1,0 +1,12 @@
+lamp_server:
+  image: box02200059/nmap_web_gui
+  net: host
+  tty: yes
+  restart: always
+py_nmap_server:
+  image: astroicers/docker-nmap_excel_control-n-smb
+  volumes:
+    - /path/to/share/:/shared
+  net: host
+  tty: yes
+  restart: always
