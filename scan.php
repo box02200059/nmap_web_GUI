@@ -30,7 +30,7 @@
     echo "Connected successfully";
     mysqli_query($conn,"USE toybox");
     #$sql_if = "SELECT `scan_id` FROM `toy` WHERE `scan_id` = '".$scan_id."'";
-    $sql_if = "SELECT `ip_address` FROM `toy` WHERE `ip_address` = '".$ip_n_web."'";
+    $sql_if = "SELECT `ip_address` FROM `toy` WHERE `ip_address` = '".$ip_address."'";
     $result = $conn->query($sql_if);
     if ($result->num_rows > 0) {
         while($row = $result->fetch_assoc()) {
